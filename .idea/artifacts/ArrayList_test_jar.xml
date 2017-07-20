@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="ArrayList_test:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ArrayList_test_jar</output-path>
+    <root id="archive" name="ArrayList_test.jar">
+      <element id="module-output" name="ArrayList_test" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/beust/jcommander/1.64/jcommander-1.64.jar" path-in-jar="/" />
+      <element id="library" level="project" name="Maven: com.beust:jcommander:1.64" />
+    </root>
+  </artifact>
+</component>
