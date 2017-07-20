@@ -7,6 +7,7 @@ import org.testng.annotations.*;
  * Created by SK on 10.07.2017.
  */
 
+@Listeners(sk.Listener.class)
 public class Test_Get {
 
     @BeforeMethod()

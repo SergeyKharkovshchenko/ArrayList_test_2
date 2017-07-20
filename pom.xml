@@ -20,6 +20,18 @@
             <artifactId>jcommander</artifactId>
             <version>1.64</version>
         </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.11</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
     <profiles>

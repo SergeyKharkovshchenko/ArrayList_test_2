@@ -8,6 +8,7 @@ import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -18,7 +19,7 @@ public class Runner_Test_Change_02 {
     private TestNG tng;
     private XmlSuite suite;
     private XmlTest test;
-//    private TestListener tl;
+    private Listener tl;
 
     public Runner_Test_Change_02() {
         suite = new XmlSuite();
@@ -29,6 +30,10 @@ public class Runner_Test_Change_02 {
 
         List<XmlClass> classes = new ArrayList<XmlClass>();
         XmlClass getTest = new XmlClass(Test_Change_02.class);
+
+        HashMap<String,String> parameters = new HashMap<String,String>();
+        parameters.put("trueOrFalse2", "True");
+        getTest.setParameters(parameters);
 
         classes.add(getTest);
         test.setXmlClasses(classes);
@@ -44,7 +49,7 @@ public class Runner_Test_Change_02 {
         return tng;
     }
 
-//    public TestListener getListener() {
-//        return tl;
-//    }
+    public Listener getListener() {
+        return tl;
+    }
 }

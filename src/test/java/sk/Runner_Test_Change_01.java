@@ -18,7 +18,7 @@ public class Runner_Test_Change_01 {
     private TestNG tng;
     private XmlSuite suite;
     private XmlTest test;
-//    private TestListener tl;
+    private Listener tl;
 
     public Runner_Test_Change_01() {
         suite = new XmlSuite();
@@ -43,7 +43,7 @@ public class Runner_Test_Change_01 {
         return tng;
     }
 
-//    public TestListener getListener() {
-//        return tl;
-//    }
+    public Listener getListener() {
+        return tl;
+    }
 }

@@ -14,11 +14,12 @@ import java.util.List;
  * Created by SK on 17.07.2017.
  */
 
+
 public class Runner_Test_Get {
     private TestNG tng;
     private XmlSuite suite;
     private XmlTest test;
-//    private TestListener tl;
+    private Listener tl;
 
     public Runner_Test_Get() {
         suite = new XmlSuite();
@@ -43,7 +44,7 @@ public class Runner_Test_Get {
         return tng;
     }
 
-//    public TestListener getListener() {
-//        return tl;
-//    }
+    public Listener getListener() {
+        return tl;
+    }
 }
