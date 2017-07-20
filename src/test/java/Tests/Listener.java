@@ -1,4 +1,4 @@
-package sk;
+package Tests;
 
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;

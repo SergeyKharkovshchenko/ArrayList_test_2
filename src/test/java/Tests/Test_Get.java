@@ -1,13 +1,14 @@
-package sk;
+package Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
+import sk.Singleton;
 
 /**
  * Created by SK on 10.07.2017.
  */
 
-@Listeners(sk.Listener.class)
+@Listeners(Listener.class)
 public class Test_Get {
 
     @BeforeMethod()
@@ -15,7 +16,7 @@ public class Test_Get {
 
     @Test()
     public void testGet2() {
-        Main_sk.Singleton x  = new Main_sk.Singleton();
+        Singleton x  = new Singleton();
         x.populate();
         Assert.assertTrue(x.get().matches(".*a.*"));
     }

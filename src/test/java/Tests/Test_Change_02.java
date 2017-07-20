@@ -1,13 +1,14 @@
-package sk;
+package Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
+import sk.Singleton;
 
 /**
  * Created by SK on 10.07.2017.
  */
 
-@Listeners(sk.Listener.class)
+@Listeners(Listener.class)
 public class Test_Change_02 {
 
     @BeforeMethod()
@@ -17,7 +18,7 @@ public class Test_Change_02 {
         @Parameters("trueOrFalse2")
         public void testChange2(@Optional("test") final String trueOrFalse2) {
 //      public void testChange2(final String trueOrFalse2) {
-            Main_sk.Singleton x  = new Main_sk.Singleton();
+            Singleton x  = new Singleton();
             x.populate();
             x.change(5, trueOrFalse2);
             Assert.assertEquals(trueOrFalse2, x.get(5));

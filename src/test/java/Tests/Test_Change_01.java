@@ -1,13 +1,14 @@
-package sk;
+package Tests;
 
 import org.testng.Assert;
 import org.testng.annotations.*;
+import sk.Singleton;
 
 /**
  * Created by SK on 10.07.2017.
  */
 
-@Listeners(sk.Listener.class)
+@Listeners(Listener.class)
 public class Test_Change_01 {
 
     @BeforeMethod()
@@ -23,15 +24,11 @@ public class Test_Change_01 {
 
     @Test(dataProvider = "ValidDataProvider")
          public void testChange1(final int numberOfArray, final String trueOrFalse) {
-            Main_sk.Singleton x = new Main_sk.Singleton();
+            Singleton x = new Singleton();
             x.populate();
             x.change(numberOfArray, trueOrFalse);
             Assert.assertEquals(trueOrFalse, x.get(numberOfArray));
         }
-
-    public static void main (String[] args) {
-        System.out.println("Hello World");
-    }
 
     @AfterMethod()
     public void after() {
