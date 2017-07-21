@@ -1,3 +1,5 @@
+.gitignore
+.gitattributes
 # Compiled source #
 ###################
 *.com
