@@ -20,7 +20,7 @@ public class Singleton {
         return instance;
     }
 
-    public List<String> stringsList = new ArrayList<String>();
+    private List<String> stringsList = new ArrayList<String>();
 
     public synchronized void populate() {
         for (int i = 0; i < 100; i++) {
