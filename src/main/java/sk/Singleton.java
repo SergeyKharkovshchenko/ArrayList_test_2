@@ -1,6 +1,7 @@
 package sk;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 
@@ -8,10 +9,10 @@ import java.util.Random;
  * Created by SK on 20.07.2017.
  */
 public class Singleton {
+
     private static Singleton instance;
 
-    public Singleton() {
-    }
+    public Singleton() {}
 
     public static synchronized Singleton getInstance() {
         if (instance == null) {
@@ -20,7 +21,7 @@ public class Singleton {
         return instance;
     }
 
-    private List<String> stringsList = new ArrayList<String>();
+    List arrayList= Collections.synchronizedList(new ArrayList<String>());
 
     public synchronized void populate() {
         for (int i = 0; i < 100; i++) {
@@ -31,21 +32,20 @@ public class Singleton {
             } else {
                 stringValue = "Fail";
             }
-            stringsList.add(stringValue);
+            arrayList.add(stringValue);
         }
-//            System.out.println("arrayList: " + stringsList);
     }
 
     public synchronized void change(int posNumb, String newValue) {
-        stringsList.set(posNumb, newValue);
+        arrayList.set(posNumb, newValue);
     }
 
     public synchronized String get() {
         Random rand = new Random();
-        return stringsList.get(rand.nextInt(100));
+        return (String) arrayList.get(rand.nextInt(100));
     }
 
     public synchronized String get(int y) {
-        return stringsList.get(y);
+        return (String) arrayList.get(y);
     }
 }
